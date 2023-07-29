@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Servicio extends Model
 {
     use HasFactory;
+
+    use HasFactory;
+     //Relacion Muchos a Muchos
+     public function soldados(){
+        return $this->belongsToMany('App\Models\Soldado');
+    }
 }
